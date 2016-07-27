@@ -2,7 +2,7 @@
 
 import { Expect, TestCase } from 'alsatian';
 const Poseidon = require('noodlecrate-poseidon'); // todo: fix this with poseidon typings
-const PoseidonBuilders = require('poseidon-builders');
+const PoseidonBuilders = require('noodlecrate-poseidon-builders');
 
 const BrandSerializer = Poseidon.Serializers.BrandSerializer;
 
