@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/noodlecrate/poseidon-test/issues"
   },
-  "homepage": "https://github.com/noodlecrate/poseidon-test#readme"
+  "homepage": "https://github.com/noodlecrate/poseidon-test#readme",
+  "dependencies": {
+    "noodlecrate-poseidon": "0.0.1-alpha.0"
+  }
 }
