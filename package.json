@@ -1,0 +1,19 @@
+{
+  "name": "poseidon-test",
+  "version": "0.0.1",
+  "description": "Tests for Noodlecrate's Poseidon platform.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noodlecrate/poseidon-test.git"
+  },
+  "author": "Noodlecrate (https://github.com/noodlecrate)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noodlecrate/poseidon-test/issues"
+  },
+  "homepage": "https://github.com/noodlecrate/poseidon-test#readme"
+}
