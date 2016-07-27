@@ -1,19 +1,25 @@
 /// <reference path="../../../typings/index.d.ts" />
 
-import { Expect, Test } from 'alsatian';
+import { Expect, TestCase } from 'alsatian';
 const Poseidon = require('noodlecrate-poseidon'); // todo: fix this with poseidon typings
+const PoseidonBuilders = require('poseidon-builders');
 
-const BrandModel = Poseidon.Models.BrandModel;
-const BrandDto = Poseidon.DTOs.BrandDto;
 const BrandSerializer = Poseidon.Serializers.BrandSerializer;
+
+const BrandModelBuilder = PoseidonBuilders.Models.BrandModelBuilder;
 
 export class BrandSerializerSerializeTestFixture {
 
-    @TestCase("Pot Noodle")
-    @TestCase("Chilli Noodle")
-    @TestCase("JavaScript Noodles")
+    @TestCase('Pot Noodle')
+    @TestCase('Chilli Noodle')
+    @TestCase('JavaScript Noodles')
     public serializesNameFromModelToDto(brandName: string) {
-        Expect(1 + 1).toBe(2);
+        let model = new BrandModelBuilder().withName(brandName).build();
+        let serializer = new BrandSerializer();
+
+        let dto = serializer.serialize(model);
+
+        Expect(dto.name).toBe(brandName);
     }
 
 }
