@@ -4,7 +4,8 @@
   "description": "Tests for Noodlecrate's Poseidon platform.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p src",
+    "test": "npm run build && alsatian \"./build/**/*.spec.js\""
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "dependencies": {
     "alsatian": "^1.0.0-alpha.6",
     "noodlecrate-poseidon": "0.0.1-alpha.0"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.10"
   }
 }
