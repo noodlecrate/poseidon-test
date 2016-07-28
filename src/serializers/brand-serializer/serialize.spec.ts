@@ -10,6 +10,18 @@ const BrandModelBuilder = PoseidonBuilders.Models.BrandModelBuilder;
 
 export class BrandSerializerSerializeTestFixture {
 
+    @TestCase(1)
+    @TestCase(17)
+    @TestCase(204)
+    public serializesIdFromModelToDto(id: number) {
+        let model = new BrandModelBuilder().withId(id).build();
+        let serializer = new BrandSerializer();
+
+        let dto = serializer.serialize(model);
+
+        Expect(dto.id).toBe(id);
+    }
+
     @TestCase('Pot Noodle')
     @TestCase('Chilli Noodle')
     @TestCase('JavaScript Noodles')
